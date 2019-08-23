@@ -1,0 +1,122 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{natbib}
+\usepackage{graphicx}
+\onehalfspacing
+
+\title{Proof of Concept: Computational Analysis}
+\author{Matthew Clark\\43695841}
+\date{\vspace{-5ex}}
+
+\begin{document}
+\maketitle
+\newpage
+\section*{Introduction \& Scope}
+From my initial scoping exercise, I defined my workable scope for this unit to include the following points:
+\begin{itemize}
+    \item Collect a data set of techno songs
+    \item Analyse rhythmical structures within each song, based on:
+    \begin{itemize}
+        \item Tempo
+        \item Rhythm
+        \item Texture
+        \item Structure
+        \begin{itemize}
+            \item Micro structures/loops
+            \item Macro structures in full songs
+        \end{itemize}
+        \item Timbre of samples used
+        \item Production techniques used
+    \end{itemize}
+    \item Theorize underlying rules that techno music follows
+    \item Consolidate findings into a format for a thesis presentation
+    \item Consolidate findings into a format for machine learning (ie: convert audio files into MIDI tracks
+\end{itemize}
+For this exercise, I will be looking at the following points:
+\begin{enumerate}
+    \item Creating and gathering a data set of Techno Songs:
+    \begin{itemize}
+        \item The biggest online electronic music store for DJ's is Beatport. My goal is to extract information from their website and sort them into a spreadsheet for analytical purposes.
+    \end{itemize}
+    \item Analysing rhythmical structures
+    \begin{itemize}
+        \item This is a topic for Music Information Retrieval. Here the goal is to automate analysing the underlying rhythmical structures. This can be subdivided into 2 sub-goals:
+        \begin{itemize}
+            \item Collect the information and present it in a spreadsheet such that patterns can be identified
+            \item Converting the rhythmical percussion layers into a MIDI file, such that it can be used as a data set for machine learning.
+        \end{itemize}
+    \end{itemize}
+\end{enumerate}
+\section{Decomposition}
+\begin{enumerate}
+    \item Beatport API:
+    \begin{itemize}
+        \item Learn and understand what the Beatport API is, how it works, and how I can utilise it
+        \item Research how to use API's in data analysis
+        \item Define the scope of the data I want to collect from Beatport's API
+        \item Define what parameters I want to extract
+        \item Develop a script that can use Beatport's API to gather the required data
+        \item Extract and organise data in a spreadsheet that can be use for further analytical purposes
+    \end{itemize}
+    \item Music Information Retrieval:
+    \begin{itemize}
+        \item Look into the various applicable software that can be used
+        \item Look into previous research in rhythmical analysis in MIR
+        \item Investigate the potential application of work-in-progress MIR code
+        \item Use and evaluate various software's accuracy in its analysis
+        \item Develop a system of quantifying rhythmical structures \& techniques for a spreadsheet format
+        \item Develop a technique of using automated analysis and deliver such analysis into such spreadsheet
+        \item Develop a way to convert analysis of audio files into MIDI format
+    \end{itemize}
+\end{enumerate}
+\section{Pattern Recognition}
+\begin{enumerate}
+    \item Observable patterns from data using the Beatport API:
+    \begin{itemize}
+        \item Shifts in rhythmical techniques through time
+        \item Variations in sub-genres through time
+    \end{itemize}
+    \item Examples of observable patterns from a data set of rhythmical structures of various songs:
+    \begin{itemize}
+        \item Song length
+        \item Macro structure (intro, build up, drop etc.; bar numbers)
+        \item Micro structures (number of layers, types of layers)
+        \item Timbre Techniques (filtering over bars)
+        \item Individual rhythms (4-on-the-floor; syncopation; swing; number of notes per bar etc)
+    \end{itemize}
+    Being able to lay out data like this will help analyse quantitatively the types of techniques used and the frequency in order to identify the underlying structures which 'govern' the 'rules' of Techno.
+\end{enumerate}
+\section{Algorithm Design}
+\begin{enumerate}
+    \item A step-by-step method for working with the Beatport API:
+    \begin{enumerate}
+        \item Research the applicability of Beatport's API
+        \item Research how to use API's
+        \item Research how to pull information from API's to a spreadsheet
+        \item Research prior work done with either Beatport API and/or scripts doing similar work with other API's
+        \item Identify the types of data and the scope that I want to extract from the Beatport API
+        \item Create/modify a script to extract the data from the API
+        \item Create/modify a script to convert the data to a spreadsheet format
+        \item Copy the raw data into a new spreadsheet and clean the data up based on data carpentry exercises
+    \end{enumerate}
+    \item A step-by-step method for extracting rhythms from audio files using MIR techniques:
+    \begin{enumerate}
+        \item Research current software that can be used for extracting rhythmic information
+        \item Research into current MIR techniques for extracting rhythmic information
+        \item Research into past developed scripts/programs for extracting rhythmic information
+        \item Create a sub-data set by hand as a quality control
+        \item Experiment with findings to extract rhythmic information, and analyse outputs against the quality control subset
+        \item Research into outputting such data as MIDI files
+        \item Create a data scope for putting such analysis into a format applicable for spreadsheets
+        \item Research into converting MIDI data into such format
+        \item Develop a script to convert MIDI data into spreadsheet format
+        \item Create a spreadsheet with such data
+        \item Complement with exporting data as MIDI tracks
+        \item Research and develop techniques for analysing patterns in spreadsheet to extract structures that underline Techno music
+        \item Theorise the 'rules' that govern Techno music from the quantitative data
+    \end{enumerate}
+\end{enumerate}
+
+
+\end{document}
